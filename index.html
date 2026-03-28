@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Paused — Broke Student Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <!-- Floating coins animation -->
+  <div class="coins-bg" aria-hidden="true">
+    <span class="coin" style="--d:0s;--x:5%">💸</span>
+    <span class="coin" style="--d:1.2s;--x:18%">🪙</span>
+    <span class="coin" style="--d:2.5s;--x:33%">💸</span>
+    <span class="coin" style="--d:0.7s;--x:50%">🪙</span>
+    <span class="coin" style="--d:1.9s;--x:65%">💸</span>
+    <span class="coin" style="--d:3.1s;--x:80%">🪙</span>
+    <span class="coin" style="--d:0.4s;--x:92%">💸</span>
+  </div>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <select id="langSelect" onchange="changeLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="ne">Nepali</option>
+    </select>
+  </div>
+
+  <main class="container">
+
+    <!-- Status badge -->
+    <div class="badge">
+      <span class="badge-dot"></span>
+      <span data-en="OFFICIALLY DEAD — FOR NOW" data-ne="आधिकारिक रूपमा मृत — अहिलेको लागि">OFFICIALLY DEAD — FOR NOW</span>
+    </div>
+
+    <!-- Big emoji server -->
+    <div class="server-emoji" role="img" aria-label="Crying server">
+      <div class="server-body">🖥️</div>
+      <div class="server-tears">😭</div>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="headline">
+      <span class="line1" data-en="PROJECT" data-ne="परियोजना">PROJECT</span>
+      <span class="line2" data-en="PAUSED." data-ne="रोकिएको।">PAUSED.</span>
+    </h1>
+
+    <p class="subtitle"><span data-en="The Droplet server wanted rent money." data-ne="ड्रपलेट सर्भरले भाडा पैसा चाहायो।">The Droplet server wanted rent money.</span><br><span data-en="My wallet said " data-ne="मेरो वालेटले भन्यो ">"My wallet said </span><em data-en=""lol, no."" data-ne=""हा हा, होइन।"">"lol, no."</em></p>
+
+    <!-- Receipt card -->
+    <div class="receipt">
+      <div class="receipt-header">
+        <span data-en="🧾 INVOICE FROM THE UNIVERSE" data-ne="🧾 ब्रह्माण्डबाट चलान">🧾 INVOICE FROM THE UNIVERSE</span>
+      </div>
+      <div class="receipt-row">
+        <span data-en="DigitalOcean Droplet (1 month)" data-ne="डिजिटल ओसन ड्रपलेट (१ महिना)">DigitalOcean Droplet (1 month)</span>
+        <span class="price">$6.00</span>
+      </div>
+      <div class="receipt-row">
+        <span data-en="My Savings Account Balance" data-ne="मेरो बचत खाता शेष">My Savings Account Balance</span>
+        <span class="price broke">$0.47</span>
+      </div>
+      <div class="receipt-row receipt-divider">
+        <span data-en="Ramen noodles (survival)" data-ne="रामेन नुडल्स (जीवन रक्षा)">Ramen noodles (survival)</span>
+        <span class="price">$0.47 ✓</span>
+      </div>
+      <div class="receipt-row receipt-total">
+        <span data-en="Developer's Dignity" data-ne="विकासकर्ताको सम्मान">Developer's Dignity</span>
+        <span class="price" data-en="GONE" data-ne="गयो">GONE</span>
+      </div>
+    </div>
+
+    <!-- Status steps -->
+    <div class="steps">
+      <div class="step done">
+        <span class="step-icon">✅</span>
+        <div>
+          <strong data-en="Coded for 3 months straight" data-ne="३ महिने सीधा कोडिङ गरिएको">Coded for 3 months straight</strong>
+          <p data-en="Skipped sleep, skipped meals, didn't skip coding." data-ne="निन्द छोडे, खाना छोडे, कोडिङ छोडेनन।">Skipped sleep, skipped meals, didn't skip coding.</p>
+        </div>
+      </div>
+      <div class="step done">
+        <span class="step-icon">✅</span>
+        <div>
+          <strong data-en="Deployed to server (briefly)" data-ne="सर्भरमा परिनियोजित (छोटोको लागि)">Deployed to server (briefly)</strong>
+          <p data-en="It worked! For exactly 30 days. Clock is ticking..." data-ne="यो काम गर्यो! ठीक ३० दिनको लागि। घडी टिक-टिक छ...">It worked! For exactly 30 days. Clock is ticking...</p>
+        </div>
+      </div>
+      <div class="step current">
+        <span class="step-icon">😬</span>
+        <div>
+          <strong data-en="Renewal bill arrived" data-ne="नवीकरण बिल आयो">Renewal bill arrived</strong>
+          <p data-en="Opened the email. Saw the amount. Closed the laptop." data-ne="इमेल खोले। रकम देखे। ल्यापटप बन्द गरे।">Opened the email. Saw the amount. Closed the laptop.</p>
+        </div>
+      </div>
+      <div class="step pending">
+        <span class="step-icon">⏳</span>
+        <div>
+          <strong data-en="Waiting for salary / scholarship / miracle" data-ne="तलब / छात्रवृत्ति / चमत्कारको प्रतीक्षा">Waiting for salary / scholarship / miracle</strong>
+          <p data-en="Whichever comes first. (Probably the miracle.)" data-ne="कुनै पनि पहले आए। (शायद चमत्कार।)">Whichever comes first. (Probably the miracle.)</p>
+        </div>
+      </div>
+      <div class="step pending">
+        <span class="step-icon">🚀</span>
+        <div>
+          <strong data-en="Back online — someday" data-ne="अनलाइन फिर्ता — कहिले काही">Back online — someday</strong>
+          <p data-en="The dream lives on. The server does not." data-ne="स्वप्न जीवित रहन्छ। सर्भर त होइन।">The dream lives on. The server does not.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donation CTA (joke) -->
+    <div class="cta-box">
+      <p class="cta-label" data-en="Want to help this poor developer survive?" data-ne="यो गरिब विकासकर्तालाई जीवित रहन मदत गर्न चाहनुहुन्छ?">Want to help this poor developer survive?</p>
+      <button class="cta-btn" onclick="handleDonate()"><span data-en="💰 Buy Me a Droplet" data-ne="💰 मलाई ड्रपलेट किनिदिनुस्">💰 Buy Me a Droplet</span></button>
+      <p class="cta-note" data-en="*clicking this does absolutely nothing. I'm a student, not a scammer." data-ne="*यो क्लिक गर्दा कुनै काम गर्दैन। म विद्यार्थी हूँ, ठग होइन।">*clicking this does absolutely nothing. I'm a student, not a scammer.</p>
+    </div>
+
+    <!-- Toast that appears on button click -->
+    <div class="toast" id="toast" data-en="🤣 Nice try. I don't even have a payment gateway deployed." data-ne="🤣 राम्रो प्रयास। मेरोसँग भुक्तान गेटवे पनि छैन।">🤣 Nice try. I don't even have a payment gateway deployed.</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p><span data-en="Built with ☕ caffeine &amp; 💔 heartbreak &nbsp;·&nbsp; Paused with 🪙 " data-ne="☕ क्याफिन र 💔 दुःख सँग बनाइएको &nbsp;·&nbsp; 🪙 सँग रोकिएको ">Built with ☕ caffeine &amp; 💔 heartbreak &nbsp;·&nbsp; Paused with 🪙 </span><strong>$0.47</strong> <span data-en="in the bank" data-ne="बैंकमा">in the bank</span></p>
+      <p class="footer-sub" data-en="© 2025 Some Broke Student™ — All Rights Reserved (but server isn't)" data-ne="© 2025 गरिब विद्यार्थी™ — सबै अधिकार संरक्षित (तर सर्भर छैन)">© 2025 Some Broke Student™ — All Rights Reserved (but server isn't)</p>
+    </footer>
+
+  </main>
+
+  <script>
+    function handleDonate() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    function changeLanguage(lang) {
+      localStorage.setItem('selectedLanguage', lang);
+      const elements = document.querySelectorAll('[data-en][data-ne]');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    }
+
+    // Load saved language on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+      document.getElementById('langSelect').value = savedLang;
+      changeLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>
